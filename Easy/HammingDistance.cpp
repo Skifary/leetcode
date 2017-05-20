@@ -8,8 +8,7 @@
 
 #include "HammingDistance.hpp"
 
-
-int hammingDistance(int x, int y)
+int LeetCode::hammingDistance(int x, int y)
 {
     int res = 0, exc = x ^ y; //异或得到不同位数 例如 0010 ^ 0000 = 0010
     while (exc) {
