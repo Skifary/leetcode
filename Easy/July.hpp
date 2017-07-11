@@ -24,6 +24,8 @@
 using namespace std;
 
 
+#include <string>
+
 namespace LeetCode {
     
     
@@ -53,8 +55,18 @@ namespace LeetCode {
          */
 
         vector<double> averageOfLevels(TreeNode* root);
-    };
+    }
     
+    
+    namespace FindWords {
+        
+        /*
+         *   500. Keyboard Row
+         */
+        
+        vector<string> findWords(vector<string>& words);
+        
+    }
 }
 
 

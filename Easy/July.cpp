@@ -61,3 +61,37 @@ vector<double> AverageOfLevels::averageOfLevels(TreeNode* root)
     }
     return result;
 }
+
+
+vector<string> FindWords::findWords(vector<string>& words)
+{
+    string first = "qwertyuiop";
+    string second = "asdfghjkl";
+    string third = "zxcvbnm";
+    
+    vector<string> result;
+    
+    for (int i = 0; i < words.size(); ++i) {
+        string row;
+        
+        if (first.find(tolower(words[i].front())) != string::npos) {
+            row = first;
+        } else if (second.find(tolower(words[i].front())) != string::npos) {
+            row = second;
+        } else {
+            row = third;
+        }
+        
+        for (int j = 0; j < words[i].size(); j++) {
+            if (row.find(tolower(words[i][j])) == string::npos) {
+                break;
+            }
+            if (j == words[i].size() - 1) {
+
+                result.push_back(words[i]);
+            }
+        }
+    }
+    
+    return result;
+}
