@@ -12,9 +12,6 @@
 using namespace LeetCode;
 
 
-using namespace MergeTrees;
-
-
 TreeNode* MergeTrees::mergeTrees(TreeNode* t1, TreeNode* t2)
 {
     if (!t1) {
@@ -30,3 +27,37 @@ TreeNode* MergeTrees::mergeTrees(TreeNode* t1, TreeNode* t2)
     return result;
 }
 
+
+vector<double> AverageOfLevels::averageOfLevels(TreeNode* root)
+{
+    vector<double> result;
+    double sum = 0.0;
+    int count = 0;
+    vector<TreeNode *> tmp;
+    tmp.push_back(root);
+    tmp.push_back(nullptr);
+    while (!tmp.empty()) {
+        TreeNode *node = tmp.front();
+        tmp.erase(tmp.begin());
+        if (node == nullptr) {
+            result.push_back(sum/count);
+            sum = 0.0;
+            count = 0;
+            if (!tmp.empty()) {
+                tmp.push_back(nullptr);
+            }
+        }
+        else
+        {
+            ++count;
+            sum += node->val;
+            if (node->left) {
+                tmp.push_back(node->left);
+            }
+            if (node->right) {
+                tmp.push_back(node->right);
+            }
+        }
+    }
+    return result;
+}

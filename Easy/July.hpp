@@ -20,8 +20,22 @@
 #include <stdio.h>
 
 
+#include <vector>
+using namespace std;
+
 
 namespace LeetCode {
+    
+    
+    /**
+     tree
+     */
+    struct TreeNode {
+        int val;
+        TreeNode *left;
+        TreeNode *right;
+        TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+    };
     
     namespace MergeTrees{
 
@@ -29,15 +43,17 @@ namespace LeetCode {
          *   617. Merge Two Binary Trees
          */
         
-        struct TreeNode {
-            int val;
-            TreeNode *left;
-            TreeNode *right;
-            TreeNode(int x) : val(x), left(NULL), right(NULL) {}
-        };
-        
         TreeNode* mergeTrees(TreeNode* t1, TreeNode* t2);
     }
+    
+    namespace AverageOfLevels {
+        
+        /*
+         *   637. Average of Levels in Binary Tree
+         */
+
+        vector<double> averageOfLevels(TreeNode* root);
+    };
     
 }
 
