@@ -61,6 +61,12 @@ namespace LeetCode {
      *   557. Reverse Words in a String III
      */
     string reverseWords(string s);
+    
+    
+    /**
+     *   566. Reshape the Matrix
+     */
+    vector<vector<int>> matrixReshape(vector<vector<int>>& nums, int r, int c);
 }
 
 

@@ -108,3 +108,26 @@ string LeetCode::reverseWords(string s)
     }
     return s;
 }
+
+
+vector<vector<int>> LeetCode::matrixReshape(vector<vector<int>>& nums, int r, int c) {
+    
+    if (nums.size() == 0 || ((nums.front()).size() <= c && nums.size() <= r)) {
+        return nums;
+    }
+    
+    vector<vector<int>> result;
+    vector<int> dimensional;
+    for (vector<vector<int>>::iterator itr = nums.begin(); itr < nums.end(); ++itr) {
+        for (vector<int>::iterator itr2 = itr->begin(); itr2 < itr->end(); ++itr2) {
+            dimensional.push_back((*itr2));
+            
+            if (dimensional.size() == c) {
+                result.push_back(dimensional);
+                dimensional.clear();
+            }
+            
+        }
+    }
+    return result;
+}
