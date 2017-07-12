@@ -28,7 +28,6 @@ using namespace std;
 
 namespace LeetCode {
     
-    
     /**
      tree
      */
@@ -39,34 +38,29 @@ namespace LeetCode {
         TreeNode(int x) : val(x), left(NULL), right(NULL) {}
     };
     
-    namespace MergeTrees{
 
-        /*
-         *   617. Merge Two Binary Trees
-         */
-        
-        TreeNode* mergeTrees(TreeNode* t1, TreeNode* t2);
-    }
-    
-    namespace AverageOfLevels {
-        
-        /*
-         *   637. Average of Levels in Binary Tree
-         */
+    /**
+     *   617. Merge Two Binary Trees
+     */
+    TreeNode* mergeTrees(TreeNode* t1, TreeNode* t2);
 
-        vector<double> averageOfLevels(TreeNode* root);
-    }
+    
+    /**
+     *   637. Average of Levels in Binary Tree
+     */
+    vector<double> averageOfLevels(TreeNode* root);
     
     
-    namespace FindWords {
-        
-        /*
-         *   500. Keyboard Row
-         */
-        
-        vector<string> findWords(vector<string>& words);
-        
-    }
+    /**
+     *   500. Keyboard Row
+     */
+    vector<string> findWords(vector<string>& words);
+    
+    
+    /**
+     *   557. Reverse Words in a String III
+     */
+    string reverseWords(string s);
 }
 
 

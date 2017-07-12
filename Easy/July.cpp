@@ -12,7 +12,7 @@
 using namespace LeetCode;
 
 
-TreeNode* MergeTrees::mergeTrees(TreeNode* t1, TreeNode* t2)
+TreeNode* LeetCode::mergeTrees(TreeNode* t1, TreeNode* t2)
 {
     if (!t1) {
         return t2;
@@ -28,7 +28,7 @@ TreeNode* MergeTrees::mergeTrees(TreeNode* t1, TreeNode* t2)
 }
 
 
-vector<double> AverageOfLevels::averageOfLevels(TreeNode* root)
+vector<double> LeetCode::averageOfLevels(TreeNode* root)
 {
     vector<double> result;
     double sum = 0.0;
@@ -63,7 +63,7 @@ vector<double> AverageOfLevels::averageOfLevels(TreeNode* root)
 }
 
 
-vector<string> FindWords::findWords(vector<string>& words)
+vector<string> LeetCode::findWords(vector<string>& words)
 {
     string first = "qwertyuiop";
     string second = "asdfghjkl";
@@ -94,4 +94,17 @@ vector<string> FindWords::findWords(vector<string>& words)
     }
     
     return result;
+}
+
+
+string LeetCode::reverseWords(string s)
+{
+    string::iterator start = s.begin();
+    for (string::iterator itr = s.begin(); itr < s.end(); ++itr) {
+        if (' ' == *(itr + 1) || itr == s.end() - 1) {
+            reverse(start, itr + 1);
+            start = itr + 2;
+        }
+    }
+    return s;
 }
