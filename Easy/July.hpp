@@ -67,6 +67,12 @@ namespace LeetCode {
      *   566. Reshape the Matrix
      */
     vector<vector<int>> matrixReshape(vector<vector<int>>& nums, int r, int c);
+    
+    
+    /**
+     *   575. Distribute Candies
+     */
+    int distributeCandies(vector<int>& candies);
 }
 
 

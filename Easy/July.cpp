@@ -131,3 +131,13 @@ vector<vector<int>> LeetCode::matrixReshape(vector<vector<int>>& nums, int r, in
     }
     return result;
 }
+
+#include <unordered_set>
+int LeetCode::distributeCandies(vector<int>& candies)
+{
+    unordered_set<int> sisterCandies;
+    for (vector<int>::iterator itr = candies.begin(); itr < candies.end(); ++itr) {
+        sisterCandies.insert(*itr);
+    }
+    return (int)(sisterCandies.size() < candies.size()/2 ? sisterCandies.size() : candies.size()/2);
+}
