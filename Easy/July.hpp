@@ -76,11 +76,15 @@ namespace LeetCode {
     
     
     /**
-     *   Reverse String
+     *   344. Reverse String
      */
     string reverseString(string s);
 
-
+    
+    /**
+     *   412. Fizz Buzz
+     */
+    vector<string> fizzBuzz(int n);
 }
 
 
