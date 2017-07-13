@@ -85,6 +85,12 @@ namespace LeetCode {
      *   412. Fizz Buzz
      */
     vector<string> fizzBuzz(int n);
+    
+    
+    /**
+     *   496. Next Greater Element I
+     */
+    vector<int> nextGreaterElement(vector<int>& findNums, vector<int>& nums);
 }
 
 

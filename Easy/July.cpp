@@ -172,3 +172,19 @@ vector<string> LeetCode::fizzBuzz(int n)
     }
     return result;
 }
+
+
+vector<int> LeetCode::nextGreaterElement(vector<int>& findNums, vector<int>& nums)
+{
+    vector<int> result(findNums.size(),-1);
+    for (int i = 0; i < findNums.size(); ++i) {
+        vector<int>::iterator index = find(nums.begin(), nums.end(), findNums[i]);
+        for (; index < nums.end(); ++index) {
+            if (findNums[i] < *index) {
+                result[i] = *index;
+                break;
+            }
+        }
+    }
+    return result;
+}
