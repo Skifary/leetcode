@@ -73,6 +73,14 @@ namespace LeetCode {
      *   575. Distribute Candies
      */
     int distributeCandies(vector<int>& candies);
+    
+    
+    /**
+     *   Reverse String
+     */
+    string reverseString(string s);
+
+
 }
 
 

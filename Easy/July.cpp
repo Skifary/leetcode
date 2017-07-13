@@ -141,3 +141,16 @@ int LeetCode::distributeCandies(vector<int>& candies)
     }
     return (int)(sisterCandies.size() < candies.size()/2 ? sisterCandies.size() : candies.size()/2);
 }
+
+
+string LeetCode::reverseString(string s)
+{
+    long i = 0, j = s.size() - 1;
+    while (i < j) {
+        char tmp;
+        tmp = s[i];
+        s[i++] = s[j];
+        s[j--] = tmp;
+    }
+    return s;
+}
