@@ -101,8 +101,20 @@ namespace LeetCode {
     
     /**
      *   292. Nim Game
+     *
+     *      这个题不考编程考脑子
+     *
      */
     bool canWinNim(int n);
+    
+    
+    /**
+     *   521. Longest Uncommon Subsequence I
+     *
+     *      这个题有点蠢
+     *
+     */
+    int findLUSlength(string a, string b);
 }
 
 

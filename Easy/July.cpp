@@ -210,11 +210,22 @@ int LeetCode::islandPerimeter(vector<vector<int>>& grid)
 }
 
 
-bool canWinNim(int n)
+bool LeetCode::canWinNim(int n)
 {
     return n%4 != 0;
 }
 
+
+int LeetCode::findLUSlength(string a, string b)
+{
+    int aSize = (int)a.size(), bSize = (int)b.size();
+    if (aSize != bSize) {
+        return max(aSize, bSize);
+    } else if(a != b) {
+        return aSize;
+    }
+    return -1;
+}
 
 
 
