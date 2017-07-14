@@ -97,6 +97,12 @@ namespace LeetCode {
      *   463. Island Perimeter
      */
     int islandPerimeter(vector<vector<int>>& grid);
+    
+    
+    /**
+     *   292. Nim Game
+     */
+    bool canWinNim(int n);
 }
 
 

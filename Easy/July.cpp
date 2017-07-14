@@ -208,3 +208,18 @@ int LeetCode::islandPerimeter(vector<vector<int>>& grid)
     }
     return 4 * result - 2 * repeat;
 }
+
+
+bool canWinNim(int n)
+{
+    return n%4 != 0;
+}
+
+
+
+
+
+
+
+
+
