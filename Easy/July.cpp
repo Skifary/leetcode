@@ -228,7 +228,14 @@ int LeetCode::findLUSlength(string a, string b)
 }
 
 
-
+int findMaxConsecutiveOnes(vector<int>& nums)
+{
+    int result = 0,tmp = 0;
+    for (vector<int>::iterator itr = nums.begin(); itr < nums.end(); ++itr) {
+        *itr == 1 ? (result = ++tmp > result ? tmp : result) : (tmp = 0);
+    }
+    return result;
+}
 
 
 

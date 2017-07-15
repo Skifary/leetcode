@@ -115,6 +115,12 @@ namespace LeetCode {
      *
      */
     int findLUSlength(string a, string b);
+    
+    
+    /**
+     *   485. Max Consecutive Ones
+     */
+    int findMaxConsecutiveOnes(vector<int>& nums);
 }
 
 
