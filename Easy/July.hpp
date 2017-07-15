@@ -121,6 +121,12 @@ namespace LeetCode {
      *   485. Max Consecutive Ones
      */
     int findMaxConsecutiveOnes(vector<int>& nums);
+    
+    
+    /**
+     *   104. Maximum Depth of Binary Tree
+     */
+    int maxDepth(TreeNode* root);
 }
 
 
